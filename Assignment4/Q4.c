@@ -4,7 +4,7 @@ operator as arguments and returns result.*/
 #include<stdio.h>
 
 int calculator(int , int, char);
-
+int flag=1;
 int main()
 {
 	int num1,num2,result;
@@ -40,13 +40,14 @@ int calculator(int n1, int n2, char ch)
 			if(n2!=0)
 			return n1/n2;
 			else
-				printf("0 error\n");
-			return 0;
+				flag=0;
+			return flag;
 			break;
 
 		default:
 			printf("wrong operation entered\n");
-			return 0;
+			flag=0;
+			return flag;
 	}
 }
 
